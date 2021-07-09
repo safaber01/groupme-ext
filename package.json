@@ -1,0 +1,15 @@
+{
+  "name": "groupme-ext",
+  "version": "1.0.0",
+  "description": "Extended GroupMe API for NodeJS",
+  "main": "api.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safaber01/groupme-ext.git"
+  },
+  "author": "Scott Faber <safaber01@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
