@@ -146,7 +146,7 @@ async function dmsIndex(token, other_user_id) {
 async function dmsCreate(token, source_guid, recipient_id, text, attachments) {
   const direct_message = { source_guid, recipient_id, text, attachments };
   const response = await stateless.post(`/direct_messages?token=${token}`, { direct_message });
-  return { message: response.data.response.direct_message };
+  return response.data.response;
 }
 
 async function likesCreate(token, conversation_id, message_id) {
