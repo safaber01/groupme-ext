@@ -60,7 +60,7 @@ export namespace pictures {
     export { picturesPictures as pictures };
 }
 
-type attachment = {
+export type attachment = {
     type: 'image';
     url: string;
 } | {
@@ -77,7 +77,7 @@ type attachment = {
     loci: number[][];
     user_ids: string[];
 }
-type Group = {
+export type Group = {
     id: string;
     name: string;
     type: string;
@@ -105,14 +105,14 @@ type Group = {
         };
     }[];
 }
-type member = {
+export type member = {
     nickname: string;
     user_id?: string;
     phone_number?: string;
     email?: string;
     guid?: string;
 }
-type Member = {
+export type Member = {
     id: string;
     user_id: string;
     nickname: string;
@@ -122,7 +122,7 @@ type Member = {
     app_installed: boolean;
     guid: string;
 }
-type Message = {
+export type Message = {
     id: string;
     source_guid: string;
     created_at: number;
@@ -135,7 +135,7 @@ type Message = {
     favorited_by: string[];
     attachments: attachment[];
 }
-type DirectMessage = {
+export type DirectMessage = {
     id: string;
     source_guid: string;
     recipient_id: string;
@@ -147,7 +147,7 @@ type DirectMessage = {
     favorited_by: string[];
     attachments: attachment[];
 }
-type Chat = {
+export type Chat = {
     created_at: string;
     updated_at: string;
     last_message: DirectMessage & {
@@ -160,7 +160,7 @@ type Chat = {
         name: string;
     };
 }
-type Bot = {
+export type Bot = {
     bot_id: string;
     group_id: string;
     name: string;
@@ -168,7 +168,7 @@ type Bot = {
     callback_url: string;
     dm_notification: boolean;
 }
-type User = {
+export type User = {
     id: string;
     phone_number: string;
     image_url: string;
@@ -178,7 +178,7 @@ type User = {
     email: string;
     sms: boolean;
 }
-type Block = {
+export type Block = {
     user_id: string;
     blocked_user_id: string;
     created_at: number;
