@@ -133,6 +133,8 @@ export type Message = {
     text: string;
     system: boolean;
     favorited_by: string[];
+    sender_type: 'user' | string;
+    sender_id: string;
     attachments: attachment[];
 }
 export type DirectMessage = {
@@ -151,7 +153,7 @@ export type Chat = {
     created_at: string;
     updated_at: string;
     last_message: DirectMessage & {
-        sender_type: string;
+        sender_type: 'user' | string;
     };
     messages_count: number;
     other_user: {
